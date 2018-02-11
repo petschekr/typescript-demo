@@ -12,13 +12,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	const taskName = document.querySelector("input"); // We don't have to cast this. Why not?
 
 	function markDone(event, callback) {
-		let id = event.target.dataset.id;
+		let button = event.target;
+		let id = button.dataset.id;
 		fetch("/api/task/" + id, {
 			method: "POST"
 		}).then(parseJSON).then(function (response) {
 			console.log(response);
 			// Remove the task from the list
-			event.target.parentElement.remove();
+			button.parentElement.remove();
 			// null = no error
 			callback(null);
 		}).catch(function (err) {
