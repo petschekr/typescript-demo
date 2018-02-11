@@ -1,5 +1,4 @@
-const fs = require("fs");
-//import * as fs from "fs";
+import * as fs from "fs";
 
 // Needs a seperate type package
 import * as express from "express";
