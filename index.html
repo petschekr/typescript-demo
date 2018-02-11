@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HackGT Checklist</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous" />
+		<style>
+			html {
+				background-color: #eee;
+			}
+			body {
+				background-color: #fff;
+				max-width: 800px;
+				margin: 20px auto;
+				padding: 10px 30px;
+				border-radius: 2px;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			}
+			form {
+				text-align: center;
+			}
+			.row {
+				display: flex;
+				justify-content: space-between;
+			}
+			.row > * {
+				align-self: center;
+			}
+			.row > article > p {
+				color: #444;
+			}
+		</style>
+		
+		<!-- Corresponds to our js/main.ts file -->
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<h1>HackGT Checklist</h1>
+
+		<form class="pure-form">
+			<fieldset>
+				<legend>Add a new task</legend>
+				<input type="text" placeholder="Task name" />
+				<!-- type="button" required so that form doesn't submit conventionally -->
+				<button type="button" class="pure-button pure-button-primary" id="add">Add</button>
+			</fieldset>
+		</form>
+
+		<template>
+			<div class="row">
+				<article>
+					<h3>Hello world</h3>
+					<p>Subtext</p>
+				</article>
+				<button id="done">Done</button>
+			</div>
+		</template>
+
+		<main id="checklist"></main>
+	</body>
+</html>
