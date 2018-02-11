@@ -4,3 +4,4 @@ classes.js
 datatypes.js
 settings.js
 routes/*.js
+**/*.map
