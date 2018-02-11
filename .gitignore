@@ -1,4 +1,6 @@
 node_modules/
 server.js
 classes.js
+datatypes.js
+settings.js
 routes/*.js
