@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		}).then(parseJSON).then(function (response) {
 			taskName.value = "";
 			alert("Task added successfully");
+			window.location.reload();
 		}).catch(function (err) {
 			console.error(err);
 			alert("An error occurred while adding the task");
