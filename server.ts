@@ -1,5 +1,5 @@
-const fs = require("fs");
-//import * as fs from "fs";
+// const fs = require("fs");
+import * as fs from "fs";
 
 // Needs a seperate type package
 import * as express from "express";
@@ -22,9 +22,12 @@ function readFileAsync(filename: string): Promise<string> {
 	});
 }
 
-app.route("/").get((request, response) => {
-	response.send("Hello world!");
+app.route("/").get(async (request, response) => {
+	response.send(await readFileAsync("index.html"));
 	console.log(`Request for / processed at ${moment().format("h:mm A")}`);
+});
+app.route("/js/main.js").get(async (request, response) => {
+	response.send(await readFileAsync("js/main.js"));
 });
 
 import { apiRouter } from "./routes/api";
